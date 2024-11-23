@@ -19,24 +19,55 @@ const App = () => {
     };
 
     return (
-        <div>
-            <h1>Chat with GPT-4</h1>
-            <textarea
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-                placeholder="Enter your message..."
-                rows="5"
-                cols="50"
-            />
-            <br />
-            <button onClick={handleSubmit}>Send</button>
+        <div className="bg-light">
+            <div className="container d-flex justify-content-center align-items-center min-vh-100">
+                <div className="card" style={{width: '100%', maxWidth: '400px'}}>
+                    <div className="card-body">
+                        <h5 className="card-title text-center mb-4">Login</h5>
+                        <form>
+                            {/* Email Input */}
+                            <div className="mb-3">
+                                <label htmlFor="email" className="form-label">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
 
-            {/* Display error if any */}
-            {error && <div style={{ color: "red" }}>{error}</div>}
+                            {/* Password Input */}
+                            <div className="mb-3">
+                                <label htmlFor="password" className="form-label">Password</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                    required
+                                />
+                            </div>
 
-            <div>
-                <h3>Response:</h3>
-                <p>{response}</p>
+                            {/* Remember Me Checkbox */}
+                            <div className="form-check mb-3">
+                                <input
+                                    type="checkbox"
+                                    className="form-check-input"
+                                    id="rememberMe"
+                                />
+                                <label className="form-check-label" htmlFor="rememberMe">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            {/* Login Button */}
+                            <button type="submit" className="btn btn-primary w-100">
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     );
