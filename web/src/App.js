@@ -55,6 +55,7 @@ const App = () => {
                             <div className="d-flex align-items-center justify-content-center">
                                 <hr className="flex-grow-1 divider-line"/>
                                 <span className="mx-3 divider-text">or</span>
+
                                 <hr className="flex-grow-1 divider-line"/>
                             </div>
                         </form>
