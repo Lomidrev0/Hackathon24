@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.text-purple {
+  color: #800040;
+}
+
+/* Divider lines styling */
+.divider-line {
+  border: 0;
+  height: 1px;
+  background-color: #800040;
+}
+
+/* Text between the dividers */
+.divider-text {
+  color: #800040;
+  font-weight: bold;
+}

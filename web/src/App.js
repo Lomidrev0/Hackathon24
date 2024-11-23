@@ -25,46 +25,38 @@ const App = () => {
                     <div className="card-body">
                         <h5 className="card-title text-center mb-4">Login</h5>
                         <form>
-                            {/* Email Input */}
                             <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Email address</label>
                                 <input
                                     type="email"
                                     className="form-control"
                                     id="email"
-                                    placeholder="Enter your email"
+                                    placeholder="Email"
                                     required
                                 />
                             </div>
 
-                            {/* Password Input */}
                             <div className="mb-3">
-                                <label htmlFor="password" className="form-label">Password</label>
                                 <input
                                     type="password"
                                     className="form-control"
                                     id="password"
-                                    placeholder="Enter your password"
+                                    placeholder="Password"
                                     required
                                 />
                             </div>
 
-                            {/* Remember Me Checkbox */}
-                            <div className="form-check mb-3">
-                                <input
-                                    type="checkbox"
-                                    className="form-check-input"
-                                    id="rememberMe"
-                                />
-                                <label className="form-check-label" htmlFor="rememberMe">
-                                    Remember me
-                                </label>
-                            </div>
-
-                            {/* Login Button */}
                             <button type="submit" className="btn btn-primary w-100">
-                                Login
+                                Continue
                             </button>
+
+                            <div className="mb-3">
+                                <p>Don't have an account - <a href="#">Sing up</a></p>
+                            </div>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <hr className="flex-grow-1 divider-line"/>
+                                <span className="mx-3 divider-text">or</span>
+                                <hr className="flex-grow-1 divider-line"/>
+                            </div>
                         </form>
                     </div>
                 </div>
