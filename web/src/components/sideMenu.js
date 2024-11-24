@@ -1,12 +1,14 @@
 import React from "react";
 import "../css/sideMenu.css";
 
-const SideMenu = ({ isOpen, toggleMenu }) => {
+const SideMenu = ({ isOpen, onClose  }) => {
+
     return (
         <div className={`side-menu ${isOpen ? "open" : ""}`}>
             <div className="menu-header">
-                <button className="close-btn delete-shadow" onClick={toggleMenu}>
-                    <i className="bi bi-x"></i>
+                <button className="close-btn delete-shadow" onClick={onClose}>
+                    <i className="bi bi-x"
+                    ></i>
                 </button>
                 <div className="user-avatar">
                     <span>D</span>

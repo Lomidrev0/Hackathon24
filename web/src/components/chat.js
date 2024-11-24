@@ -40,6 +40,7 @@ const Chat = () => {
         setAppBg();
     }, []);
 
+
     return (
         <div className="container-fluid bg-gradient vh-100 d-flex flex-column p-3 mb-0 ">
             <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
