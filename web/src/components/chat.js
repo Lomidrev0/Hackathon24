@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {setAppBg} from "./background";
 import '../css/chat.css';
+import SideMenu from "./sideMenu";
 let promptArray = [];
 
 const Chat = () => {
@@ -9,6 +10,7 @@ const Chat = () => {
     const [response, setResponse] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleSubmit = async () => {
         function addPrompt(newPrompt) {
@@ -39,20 +41,22 @@ const Chat = () => {
     }, []);
 
     return (
-        <div className="container-fluid bg-gradient vh-100 d-flex flex-column p-3 ">
+        <div className="container-fluid bg-gradient vh-100 d-flex flex-column p-3 mb-0 ">
+            <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
             <div>
                 <header className=" d-flex justify-content-between align-items-center p-3 rounded">
-                <i className=" mb-2 bi bi-list large-icon-size"></i>
+                <i className=" mb-2 bi bi-list large-icon-size"  onClick={() => setMenuOpen(true)}
+                   style={{ cursor: "pointer" }}
+                ></i>
                 <h1 className=" fs-5 primary-white-text">Smart Data Ally</h1>
                 <i className=" mb-2 bi bi-gear medium-icon-size"></i>
             </header>
 
-            <div className=" mt-3">
+            <div className=" mt-3 ">
                 <select
-                    className=" form-select secondary-background border-0 shadow"
+                    className=" form-select secondary-background border-0 shadow "
                     value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
-                >
+                    onChange={(e) => setPrompt(e.target.value)}>
                     <option value="" disabled>
                         My questions...
                     </option>
@@ -77,7 +81,7 @@ const Chat = () => {
                 </div>
             </div>
 
-            <div className=" fixed-bottom py-3">
+            <div className=" fixed-bottom py-3 z-2">
                 <div className=" container text-center container-fluid">
                     <div className=" mt-3 d-flex justify-content-left">
                         <button className=" btn primary-white-text border-0 bg-transparent ps-1">
@@ -90,7 +94,7 @@ const Chat = () => {
                         <div className=" input-group">
                             <input
                                 type=" text"
-                                className=" input-height form-control border-0 primary-background input-focus"
+                                className=" input-height form-control border-0 primary-background input-focus "
                                 placeholder=" Message"
                                 value={prompt}
                                 onChange={(e) => setPrompt(e.target.value)}

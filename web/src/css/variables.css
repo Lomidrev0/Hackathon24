@@ -5,4 +5,9 @@
     --text-color: #5F0341;
     --border-color: #b9b9b9;
     --primary-shadow: 3px 3px 8px #3b3b3b;
+    --medium-text: 14px;
+    --small-text: 10px;
+    --icons-size-medium: 25px;
+    --icons-size-large: 32px;
+    --input-height: 54px;
 }
