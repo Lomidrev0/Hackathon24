@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { setBackground } from "./background";
+import '../css/variables.css';
 
 
 const Chat = () => {
@@ -66,7 +67,6 @@ const Chat = () => {
                     <div className="mt-3 d-flex">
                         <div className="input-group">
                             <input
-                                style={{ backgroundColor: '#E5E5E5'}}
                                 type="text"
                                 className="form-control border-0"
                                 placeholder="Message"

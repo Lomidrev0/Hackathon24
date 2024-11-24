@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Chat from "./conponents/chat";
+import Chat from "./components/chat";
 
 const App = () => {
     const [prompt, setPrompt] = useState("");
