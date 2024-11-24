@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { setBackground } from "./background";
+import {setAppBg} from "./background";
 import '../css/chat.css';
 let promptArray = [];
 
@@ -35,7 +35,7 @@ const Chat = () => {
     };
 
     useEffect(() => {
-        setBackground();
+        setAppBg();
     }, []);
 
     return (

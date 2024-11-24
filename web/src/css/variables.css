@@ -1,15 +1,8 @@
 :root {
     --primary-color: #E05A6B;
     --secondary-color: #812364;
-    --custom-white: #E5E5E5;
+    --custom-white: #efefef;
     --text-color: #5F0341;
-    --border-color: #dee2e6;
-    --medium-text: 14px;
-    --small-text: 10px;
-    --icons-size-medium: 25px;
-    --icons-size-large: 32px;
-    --input-height: 54px;
-
-
-
+    --border-color: #b9b9b9;
+    --primary-shadow: 3px 3px 8px #3b3b3b;
 }

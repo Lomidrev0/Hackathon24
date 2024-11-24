@@ -73,3 +73,45 @@
 .mr10px {
   margin-right: 10px;
 }
+
+.loginText {
+  font-weight: 500;
+  color: var(--custom-white);
+  text-shadow: 3px 3px 4px var(--secondary-color);
+  text-align: left;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--custom-white) !important;
+}
+
+.card {
+  box-shadow: var(--primary-shadow);
+
+  .card-body {
+    background-color: var(--custom-white);
+
+    input{
+      background-color: var(--custom-white);
+      border-color: var(--border-color) !important;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+    h1,h2,h3,h4,h5,h6,p,span {
+      color: var(--text-color) !important;
+    }
+  }
+}
+
+.app-name-text {
+  margin-bottom: 4.5rem;
+  font-weight: 500;
+  p {
+    margin: 0;
+    color: var(--custom-white) !important;
+  }
+}
