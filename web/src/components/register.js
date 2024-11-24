@@ -2,18 +2,18 @@ import React from "react";
 import "../css/home.css";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ onSwitchToRegister }) => {
+const Register = ({ onSwitchToLogin }) => {
     const navigate = useNavigate();
 
-    const navigateToChat = (e) => {
+    const handleContinue = (e) => {
         e.preventDefault();
-        navigate('/chat');
+        navigate('/caht');
     };
 
     return (
         <div className="card" style={{width: '100%', maxWidth: '400px'}}>
             <div className="card-body">
-                <h5 className="card-title text-center mb-4">Login</h5>
+                <h5 className="card-title text-center mb-4">Register</h5>
                 <form>
                     <div className="mb-3">
                         <input type="email" className="form-control" id="email"
@@ -25,12 +25,20 @@ const Login = ({ onSwitchToRegister }) => {
                                placeholder="Password"/>
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100 mb-3" onClick={navigateToChat}>
+                    <div className="mb-3">
+                        <input type="password" className="form-control" id="confirmPassword"
+                               placeholder="Confirm password"/>
+                    </div>
+
+                    <button type="submit" className="btn btn-primary w-100 mb-3" onClick={handleContinue}>
                         Continue
                     </button>
 
                     <div className="mb-3">
-                        <p className="text-center">Don't have an account - <a href="#" onClick={(e) => { e.preventDefault(); onSwitchToRegister(); }}>Sign up</a>
+                        <p className="text-center">Already have an account - <a href="#" onClick={(e) => {
+                            e.preventDefault();
+                            onSwitchToLogin();
+                        }}>Login</a>
                         </p>
                     </div>
 
@@ -67,4 +75,4 @@ const Login = ({ onSwitchToRegister }) => {
     );
 };
 
-export default Login;
+export default Register;

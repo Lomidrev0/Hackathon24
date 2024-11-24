@@ -108,7 +108,7 @@ const Chat = () => {
                                         <span className=" visually-hidden">Loading...</span>
                                     </div>
                                 ) : (
-                                    <i className=" bi bi-send"></i>  // Send icon when not loading
+                                    <i className=" bi bi-send"></i>
                                 )}
                             </span>
                         </div>

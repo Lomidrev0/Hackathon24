@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './components/login';
 import reportWebVitals from './reportWebVitals';
 import Chat from "./components/chat";
+import Home from "./components/home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,7 +13,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/chat" element={<Chat />} />
             </Routes>
         </BrowserRouter>
