@@ -72,11 +72,12 @@ const Chat = () => {
             </div>
 
             <div className=" flex-container  mt-3 flex-grow-1">
-                <div className=" flex-item bg-white rounded p-3 text-black">
+                <div className="bg-white rounded p-3 text-black d-flex flex-column">
                     <p>Graph:</p>
+                    <img src="graph.png" alt="graf"/>
                 </div>
 
-                <div className=" flex-item bg-white rounded p-3 text-black ">
+                <div className=" bg-white rounded p-3 text-black w-100">
                     <p>Answer:</p>
                     <p>{response}</p>
                 </div>
