@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Chat from "./conponents/chat";
 
 const App = () => {
     const [prompt, setPrompt] = useState("");
@@ -63,6 +64,7 @@ const App = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
