@@ -1,3 +1,5 @@
+@import "variables.css";
+
 .App {
   text-align: center;
 }
@@ -52,4 +54,22 @@
 .divider-text {
   color: #800040;
   font-weight: bold;
+}
+.primaryBorder {
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+}
+.primaryBorder:hover,
+.primaryBorder:focus {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 0.375rem !important;
+}
+
+
+.btn-google i {
+  margin-right: 8px;
+}
+
+.mr10px {
+  margin-right: 10px;
 }
